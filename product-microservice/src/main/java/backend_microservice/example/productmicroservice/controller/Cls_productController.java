@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping("/api")
+@RequestMapping("/api/product")
 public class Cls_productController {
     @Autowired
     private Int_productRepository productRepository;
