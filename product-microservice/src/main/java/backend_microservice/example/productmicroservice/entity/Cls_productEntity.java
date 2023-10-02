@@ -1,20 +1,23 @@
 package backend_microservice.example.productmicroservice.entity;
 
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
-import org.springframework.data.annotation.Id;
-import org.springframework.data.mongodb.core.mapping.Document;
+import jakarta.persistence.*;
+import lombok.*;
 
-import javax.swing.*;
-@Document(value = "product")
+
+
+
+@Entity
 @Getter
 @Setter
 @NoArgsConstructor
+@AllArgsConstructor
+@ToString
+@Table(name = "product")
 public class Cls_productEntity {
     @Id
-    private Spring id;
-    private Spring name;
-    private Spring productDescription;
-    private Spring unitprices;
+    @GeneratedValue(strategy = GenerationType.UUID)
+    private String id;
+    private String name;
+    private String productDescription;
+    private String unitPrices;
 }
